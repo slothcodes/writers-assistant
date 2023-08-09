@@ -1,0 +1,47 @@
+[X] connect skeleton frontend to skeleton backend
+	[X] Set up openAI api
+	[X] Setup Express server
+	[X] Install openAI library
+	[X] setup basic routing
+	[X] create git repo and commit
+	[ ] Send promptRequest From Front
+		[X] Initial Test
+			[X] Put API Credentials in env variables
+	[X] Send promptResponse From Back
+	[ ] Write Jest Tests For API Req And Resp
+		[ ] 
+[ ] Build Out Article Outliner
+	[ ] Create Input Component
+		[X] Text Input
+		[X] Submit Button
+		[X] Options Dropdown
+		[ ] Prompt Options For Dropdown Menu
+			[X] Questions
+			[X] Mistakes
+			[X] Myths
+			[X] Facts
+			[X] Ideas
+			[X] Tips
+			[X] Benefits
+
+	[ ] Create Express routes on backend for each prompt type
+	[X] Make Two Divs On Outliner For Initial Blocks
+		[X] Suggested Subheadings
+		[X] Final Outline 
+	[ ] Make The Subheading Cards
+		[ ] Add "Add" Button To The Cards
+			[ ] Add button appends result to outline list
+			[ ] Make Card For Each Item In Outline List
+			[ ] Provide an undue button for the outline
+	[ ] Add "Write Article" Button
+		[ ] Takes To The Article Editor Screen
+
+[ ] Build Article Editor Component 
+	[ ] Add collapsible outline component for review and changes
+	[ ] Add Rich Text Editor Component
+	[ ] Add Ai edit suggestions
+	[ ] Add Langtool API support
+	[ ] Add mouseover/ontap (for mobile) to the suggestions
+[ ] Add Rate limiter
+[ ] Add Total Daily Limit
+[ ] Style The Components Start With Mobile First
