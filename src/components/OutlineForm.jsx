@@ -16,7 +16,7 @@ export default function OutlineForm() {
     const handleChange = (event) => {
         setInputValue(event.target.value);
     }
-    // handle submit to django backend
+    // handle submit to django backend which returns a json object with the text
     const handleSubmit = async (event) => {
         event.preventDefault();
         console.log('Submitted:',inputValue)
@@ -48,9 +48,7 @@ export default function OutlineForm() {
             <MenuItem value="questions">Questions</MenuItem>
             <MenuItem value="mistakes">Mistakes</MenuItem>
             <MenuItem value="myths">Myths</MenuItem>
-            <MenuItem value="facts">Facts</MenuItem>
             <MenuItem value="tips">Tips</MenuItem>
-            <MenuItem value="benefits">Benefits</MenuItem> 
           </Select>         
         </FormControl>
         <Button variant="contained" type="submit" onSubmit={handleSubmit}>Default</Button>

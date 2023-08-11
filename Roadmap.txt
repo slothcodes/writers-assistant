@@ -24,13 +24,22 @@
 			[X] Tips
 			[X] Benefits
 
-	[ ] Create Express routes on backend for each prompt type
 	[X] Make Two Divs On Outliner For Initial Blocks
 		[X] Suggested Subheadings
-		[X] Final Outline 
+		[X] Final Outline
+	[X] Create Express routes on backend for each prompt type
+		[X] Questions
+		[X] Mistakes
+		[X] Myths
+		[X] Facts
+		[X] Ideas
+		[X] Tips
+		[X] Benefits 
+	[ ] Add Validation to FE prompt text
 	[ ] Make The Subheading Cards
 		[ ] Add "Add" Button To The Cards
 			[ ] Add button appends result to outline list
+			[ ] If added disable add button
 			[ ] Make Card For Each Item In Outline List
 			[ ] Provide an undue button for the outline
 	[ ] Add "Write Article" Button
