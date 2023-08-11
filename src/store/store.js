@@ -1,9 +1,9 @@
 import {configureStore} from '@reduxjs/toolkit'
-import testReducer from '../slices/testSlice'
+import outlinePromptResultsReducer from '../slices/testSlice'
 
 const store = configureStore({
     reducer: {
-        test: testReducer
+        outlinePromptResults: outlinePromptResultsReducer
     }
 });
 

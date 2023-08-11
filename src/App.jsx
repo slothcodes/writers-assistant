@@ -3,17 +3,15 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 import {useSelector} from 'react-redux'
-import OutlineForm from './components/OutlineForm'
+import OutlineContainer from './containers/OutlineContainer'
 
 function App() {
   const [count, setCount] = useState(0)
-  const testMessage = useSelector(state => state.test.text)
-  console.log(testMessage)
   return (
     <>
       <div className="card">
-        <OutlineForm />
-        {testMessage}
+        <OutlineContainer />
+
       </div>
     </>
   )
