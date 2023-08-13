@@ -35,20 +35,21 @@
 		[X] Ideas
 		[X] Tips
 		[X] Benefits 
-	[ ] Add Validation to FE prompt text
+	[X] Add Validation to FE prompt text
+		[X] Tooltip if fail
+			[X] Set Timeout For Tooltip
 	[ ] Make The Subheading Cards
 		[ ] Add "Add" Button To The Cards
-			[ ] Add button appends result to outline list
-			[ ] If added disable add button
-			[ ] Make Card For Each Item In Outline List
-			[ ] Provide an undue button for the outline
+			[X] Add button appends result to outline list
+			[X] If added disable add button
+			[X] Make Card For Each Item In Outline List
+			[ ] Provide a remove button for the outline
 	[ ] Add "Write Article" Button
 		[ ] Takes To The Article Editor Screen
 
 [ ] Build Article Editor Component 
-	[ ] Add collapsible outline component for review and changes
 	[ ] Add Rich Text Editor Component
-	[ ] Add Ai edit suggestions
+	[ ] Add Ai edit suggestions component
 	[ ] Add Langtool API support
 	[ ] Add mouseover/ontap (for mobile) to the suggestions
 [ ] Add Rate limiter

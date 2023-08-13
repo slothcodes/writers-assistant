@@ -1,4 +1,4 @@
-import {createSlice} from '@reduxjs/toolkit';
+import { createSlice } from '@reduxjs/toolkit';
 
 const outlinePromptResults = createSlice({
     name: 'outlinePromptResults',
@@ -6,12 +6,12 @@ const outlinePromptResults = createSlice({
         results: ['hello test world']
     },
     reducers: {
-        setText: (state, action) => {
+        setList: (state, action) => {
             state.results = action.payload;
         }
 
     }
 });
 
-export const {setText} = outlinePromptResults.actions;
+export const {setList} = outlinePromptResults.actions;
 export default outlinePromptResults.reducer;

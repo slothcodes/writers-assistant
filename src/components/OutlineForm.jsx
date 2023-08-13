@@ -5,12 +5,15 @@ import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
 import { Select, MenuItem, FormControl, InputLabel } from '@mui/material';
 import { useSelector } from "react-redux"; 
-import {setText} from '../slices/testSlice'
+import {setList} from '../slices/promptResultsSlice'
 import { useDispatch } from "react-redux";
+import Tooltip from '@mui/material/Tooltip';
 
 export default function OutlineForm() {
     const [promptSelection, setPromptSelection] = React.useState('questions');
     const [inputValue, setInputValue] = React.useState('');
+    const [showTooltip, setShowTooltip] = React.useState(false);
+
     const dispatch = useDispatch();
     // handle change of input state
     const handleChange = (event) => {
@@ -23,17 +26,25 @@ export default function OutlineForm() {
     // Validate Prompt Input
     const validatePromptInput = () => {
       // check if input is between minimum and maximum number of characters
-      if (inputValue.length < 10 || inputValue.length > 200) {
-        return 'Prompt must be between 10 and 200 characters';
+      if (inputValue.length < 1 || inputValue.length > 200) {
+        console.log("Prompt must be between 1 and 200 characters")
+        setShowTooltip(true);
+         // Hide the tooltip after 2 seconds
+        setTimeout(() => {
+          setShowTooltip(false);
+        }, 2000);
+        return
       }
+      console.log("Valid prompt")
+      setShowTooltip(false);
       return null; // Indicates valid prompt
     }
     
 
     // handle submit to django backend
     const handleSubmit = async (event) => {
+      event.preventDefault();
       if (validatePromptInput() === null) {
-        event.preventDefault();
         // prepare data to send
         const dataToSend = {
             promptText: inputValue,
@@ -49,14 +60,17 @@ export default function OutlineForm() {
         const results = await response.json()
         // split results into list
         const resultList = results.list[0].split('\n')
-        dispatch(setText(resultList))
+        dispatch(setList(resultList))
       }
+
     }
 
   return (
     <div>
       <form onSubmit={handleSubmit} className="prompt-form">
+        <Tooltip title="Input is required" open={showTooltip}>
         <TextField id="outlined-basic" label="Outlined" variant="outlined" onChange={handleChange}/>
+        </Tooltip>
         <FormControl>
           <InputLabel id="prompt-selection">Options</InputLabel>
           <Select
