@@ -15,9 +15,11 @@ export default function OutlinePromptResults() {
     }
 
     const resultsList = useSelector(state => state.promptResults.results)
+    const selectedArray = useSelector(state => state.outline.outline)
+    console.log('results',resultsList)
     const subheadingComponents = resultsList.map((item,index) => {
             // check whether subheading is already in outline and disable button if it is
-            const selectedArray = useSelector(state => state.outline.outline)
+            //const selectedArray = useSelector(state => state.outline.outline)
             const inList = selectedArray.includes(item)
             return <SubheadingCard key={index} Subheading={item} clickHandler={handleAddClick} disabled={inList}/>
     })

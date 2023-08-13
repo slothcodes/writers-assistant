@@ -38,16 +38,22 @@
 	[X] Add Validation to FE prompt text
 		[X] Tooltip if fail
 			[X] Set Timeout For Tooltip
-	[ ] Make The Subheading Cards
-		[ ] Add "Add" Button To The Cards
+	[X] Make The Subheading Cards
+		[X] Add "Add" Button To The Cards
 			[X] Add button appends result to outline list
 			[X] If added disable add button
 			[X] Make Card For Each Item In Outline List
-			[ ] Provide a remove button for the outline
-	[ ] Add "Write Article" Button
+			[X] Provide a remove button for the outline
+	[X] Add "Write Article" Button
+		[X] Setup Article Slice
+		[ ] Add Get Article Route
+			[ ] Test sending article request
+		[ ] Fetch Article
 		[ ] Takes To The Article Editor Screen
+	[ ] Add Button To Go To Article Screen If Article State Is Not Empty
 
 [ ] Build Article Editor Component 
+	[ ] Add button to return to outline screen
 	[ ] Add Rich Text Editor Component
 	[ ] Add Ai edit suggestions component
 	[ ] Add Langtool API support
