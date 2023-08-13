@@ -1,7 +1,7 @@
 import React from "react";
-import OutlineForm from "../components/OutlineForm";
-import OutlinePromptResults from "../components/OutlinePromptResults";
-import FinalOutline from "../components/FinalOutline";
+import OutlineForm from "../components/outlineComponents/OutlineForm";
+import OutlinePromptResults from "../components/outlineComponents/OutlinePromptResults";
+import FinalOutline from "../components/outlineComponents/FinalOutline";
 import {Button} from '@mui/material'
 import { useSelector } from "react-redux";
 import { useDispatch } from "react-redux";

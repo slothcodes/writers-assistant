@@ -1,7 +1,7 @@
 import React from "react";
-import { addToOutLine, removeFromOutline } from "../slices/outLineSlice";
+import { addToOutLine, removeFromOutline } from "../../slices/outLineSlice";
 import { useDispatch, useSelector } from "react-redux";
-import SubheadingCard from "./SubheadingCard";
+import SubheadingCard from "../outlineComponents/SubheadingCard";
 
 export default function FinalOutline() {
     const dispatch = useDispatch();

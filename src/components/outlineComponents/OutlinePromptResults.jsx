@@ -1,8 +1,8 @@
 import React from "react";
-import {setList} from '../slices/promptResultsSlice'
+import {setList} from '../../slices/promptResultsSlice'
 import { useDispatch, useSelector } from "react-redux";
 import SubheadingCard from "./SubheadingCard";
-import { addToOutLine } from "../slices/outLineSlice";
+import { addToOutLine } from "../../slices/outLineSlice";
 
 export default function OutlinePromptResults() {
     const dispatch = useDispatch();

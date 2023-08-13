@@ -1,7 +1,7 @@
 import React from "react"
 import Button from '@mui/material/Button';
 import { useDispatch, useSelector } from "react-redux";
-import { addToOutLine } from "../slices/outLineSlice";
+import { addToOutLine } from "../../slices/outLineSlice";
 
 export default function SubheadingCard(props) {
 

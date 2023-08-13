@@ -5,7 +5,7 @@ import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
 import { Select, MenuItem, FormControl, InputLabel } from '@mui/material';
 import { useSelector } from "react-redux"; 
-import {setList} from '../slices/promptResultsSlice'
+import {setList} from '../../slices/promptResultsSlice'
 import { useDispatch } from "react-redux";
 import Tooltip from '@mui/material/Tooltip';
 
