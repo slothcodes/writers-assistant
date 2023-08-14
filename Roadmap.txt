@@ -46,18 +46,16 @@
 			[X] Provide a remove button for the outline
 	[X] Add "Write Article" Button
 		[X] Setup Article Slice
-		[ ] Add Get Article Route
-			[ ] Test sending article request
-		[ ] Fetch Article
-		[ ] Takes To The Article Editor Screen
-	[ ] Add Button To Go To Article Screen If Article State Is Not Empty
+		[X] Add Get Article Route
+			[X] Test sending article request
+		[X] Fetch Article
+		[X] Takes To The Article Editor Screen
+	[X] Add Button To Go To Article Screen If Article State Is Not Empty
 
 [ ] Build Article Editor Component 
-	[ ] Add button to return to outline screen
-	[ ] Add Rich Text Editor Component
-	[ ] Add Ai edit suggestions component
-	[ ] Add Langtool API support
-	[ ] Add mouseover/ontap (for mobile) to the suggestions
+	[X] Add button to return to outline screen
+	[X] Add Rich Text Editor Component
+
 [ ] Add Rate limiter
 [ ] Add Total Daily Limit
 [ ] Style The Components Start With Mobile First

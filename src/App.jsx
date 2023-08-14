@@ -4,13 +4,18 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import {useSelector} from 'react-redux'
 import OutlineContainer from './containers/OutlineContainer'
+import EditorContainer from './containers/EditorContainer'
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [editorState, setEditorState] = useState(false)
+  const editorHandler = () => {
+      setEditorState(!editorState)
+    }
+  
   return (
     <>
       <div className="card">
-        <OutlineContainer />
+        {editorState ? <EditorContainer setEditorState = {editorHandler}/> : <OutlineContainer setEditorState = {editorHandler}/>}
 
       </div>
     </>

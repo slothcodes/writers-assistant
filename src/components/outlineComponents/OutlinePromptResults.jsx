@@ -3,6 +3,7 @@ import {setList} from '../../slices/promptResultsSlice'
 import { useDispatch, useSelector } from "react-redux";
 import SubheadingCard from "./SubheadingCard";
 import { addToOutLine } from "../../slices/outLineSlice";
+import { convertToRaw } from 'draft-js';
 
 export default function OutlinePromptResults() {
     const dispatch = useDispatch();
@@ -16,7 +17,6 @@ export default function OutlinePromptResults() {
 
     const resultsList = useSelector(state => state.promptResults.results)
     const selectedArray = useSelector(state => state.outline.outline)
-    console.log('results',resultsList)
     const subheadingComponents = resultsList.map((item,index) => {
             // check whether subheading is already in outline and disable button if it is
             //const selectedArray = useSelector(state => state.outline.outline)

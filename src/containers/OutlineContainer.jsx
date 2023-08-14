@@ -6,8 +6,9 @@ import {Button} from '@mui/material'
 import { useSelector } from "react-redux";
 import { useDispatch } from "react-redux";
 import { setArticle } from "../slices/articleSlice";
+import { ContentState, convertFromRaw, convertToRaw } from "draft-js";
 
-export default function OutlineContainer() {
+export default function OutlineContainer(props) {
         // add clickhandler to button to send user to article editor 
         const dispatch = useDispatch()
         const outLineList = useSelector(state => state.outline.outline)
@@ -23,11 +24,13 @@ export default function OutlineContainer() {
             })
             // get response from backend
             const articleJson = await article.json()
-            console.log(articleJson)
-            dispatch(setArticle(articleJson.article))
+            // convert article to raw for draftjs
+            const convertedToContentState = ContentState.createFromText(articleJson.article) 
+            const convertedArticle = convertToRaw(convertedToContentState)
+            dispatch(setArticle(convertedArticle))
             // convert button to loading mui component while waiting for response
             // set article editor state to shown
-            console.log('clicked')
+            props.setEditorState()
         }
         return (
             <div>
@@ -35,7 +38,7 @@ export default function OutlineContainer() {
                 <OutlinePromptResults />
                 <FinalOutline />
                 <Button variant="contained" color="primary" onClick={clickHandler} >Write Article</Button>
-                {articleState !== false ? <Button variant="contained" color="primary">Article Editor</Button> : null}
+                {articleState !== false ? <Button variant="contained" color="primary" onClick={props.setEditorState}>Article Editor</Button> : null}
             </div>
         );
     }
