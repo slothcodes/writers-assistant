@@ -15,7 +15,7 @@ export default function OutlineContainer(props) {
         const articleState = useSelector(state => state.article.article)
         const clickHandler = async () => {
             // send request for article to backend
-            const article = await fetch('/getArticle', {
+            const article = await fetch('api/getArticle', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -25,7 +25,8 @@ export default function OutlineContainer(props) {
             // get response from backend
             const articleJson = await article.json()
             // convert article to raw for draftjs
-            const convertedToContentState = ContentState.createFromText(articleJson.article) 
+            console.log('article',articleJson.response)
+            const convertedToContentState = ContentState.createFromText(articleJson.response[0]) 
             const convertedArticle = convertToRaw(convertedToContentState)
             dispatch(setArticle(convertedArticle))
             // convert button to loading mui component while waiting for response
@@ -38,7 +39,7 @@ export default function OutlineContainer(props) {
                 <OutlinePromptResults />
                 <FinalOutline />
                 <Button variant="contained" color="primary" onClick={clickHandler} >Write Article</Button>
-                {articleState !== false ? <Button variant="contained" color="primary" onClick={props.setEditorState}>Article Editor</Button> : null}
+                {convertFromRaw(articleState).hasText() !== false ? <Button variant="contained" color="primary" onClick={props.setEditorState}>Article Editor</Button> : null}
             </div>
         );
     }

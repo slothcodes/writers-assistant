@@ -50,7 +50,7 @@ export default function OutlineForm() {
             promptText: inputValue,
             promptType: promptSelection
         }
-        const response = await fetch('/getCompletion', {
+        const response = await fetch('/api/getCompletion', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -59,7 +59,7 @@ export default function OutlineForm() {
         })
         const results = await response.json()
         // split results into list
-        const resultList = results.list[0].split('\n')
+        const resultList = results.response[0].split('\n')
         dispatch(setList(resultList))
       }
 

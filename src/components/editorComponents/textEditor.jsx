@@ -21,7 +21,7 @@ export default function TextEditor(props) {
   };
 
   return (
-    <div className="text-editor" style={{ height: '200px', border: '1px solid #ddd' }}>
+    <div className="text-editor" style={{ minHeight: '200px', border: '1px solid #ddd' }}>
         <Editor editorState={editorState} onChange={handleEditorChange} />
     </div>
   );

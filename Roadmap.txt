@@ -4,18 +4,16 @@
 	[X] Install openAI library
 	[X] setup basic routing
 	[X] create git repo and commit
-	[ ] Send promptRequest From Front
+	[X] Send promptRequest From Front
 		[X] Initial Test
 			[X] Put API Credentials in env variables
 	[X] Send promptResponse From Back
-	[ ] Write Jest Tests For API Req And Resp
-		[ ] 
-[ ] Build Out Article Outliner
-	[ ] Create Input Component
+[X] Build Out Article Outliner
+	[X] Create Input Component
 		[X] Text Input
 		[X] Submit Button
 		[X] Options Dropdown
-		[ ] Prompt Options For Dropdown Menu
+		[X] Prompt Options For Dropdown Menu
 			[X] Questions
 			[X] Mistakes
 			[X] Myths
@@ -52,10 +50,22 @@
 		[X] Takes To The Article Editor Screen
 	[X] Add Button To Go To Article Screen If Article State Is Not Empty
 
-[ ] Build Article Editor Component 
+[X] Build Article Editor Component 
 	[X] Add button to return to outline screen
 	[X] Add Rich Text Editor Component
 
-[ ] Add Rate limiter
+[X] Add Rate limiter
+	[X] Rate limit for the api routes
+		[X] Return rate limit error for subheading or article 
+	[X] Rate limit for the main site
+
 [ ] Add Total Daily Limit
+	[ ] Create mysql db add table for total daily usage
+		[X] connect to db from node
+		[X] check if current date exists in the db
+			[X] if not initialize with a count of 1
+			[X] else increment the count
+[X] Pass openai prompt through safety filters
 [ ] Style The Components Start With Mobile First
+	[ ] Convert Write Article Button To MUI Loading Circle After Clicking
+	
